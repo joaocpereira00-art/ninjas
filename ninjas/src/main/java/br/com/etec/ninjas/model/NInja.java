@@ -9,9 +9,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table (name = "ninja")
-public class NInja {
+public class Ninja {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_ninja;
     @Column(name = "nome_ninja", nullable = false)
     private String nome;
@@ -19,9 +19,9 @@ public class NInja {
     private String cpf;
     @Column(name = "email_ninja", nullable = false, unique = true)
     private String email;
-    public NInja() {
+    public Ninja() {
     }
-    public NInja(String nome, String cpf, String email) {
+    public Ninja(String nome, String cpf, String email) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
